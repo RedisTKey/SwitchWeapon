@@ -19,7 +19,11 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
+	//用来管理生成的是否为残影
+	UPROPERTY(BlueprintReadWrite, Category="Character Properties")
+	bool bIsShadow = false;
+	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
